@@ -1,0 +1,20 @@
+services:
+  healthcare.back:
+    image: ${DOCKER_REGISTRY-}healthcareback
+    build:
+      context: .
+      dockerfile: HealthCare.Back/Dockerfile
+
+  healthcare.api:
+    image: ${DOCKER_REGISTRY-}healthcareapi
+    build:
+      context: .
+      dockerfile: HealthCare.Api/Dockerfile
+
+
+  healthcare.idp:
+    image: ${DOCKER_REGISTRY-}healthcareidp
+    build:
+      context: .
+      dockerfile: HealthCare.Idp/Dockerfile
+

@@ -1,0 +1,8 @@
+@HealthCare.Api_HostAddress = http://localhost:5216
+
+GET {{HealthCare.Api_HostAddress}}/api/v1/patients
+Accept: application/json
+
+###
+
+###

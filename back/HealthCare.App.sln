@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCare.Back", "HealthCare.Back\HealthCare.Back.csproj", "{598CB549-5BAD-4E69-A619-A0F32A952014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCare.Api", "HealthCare.Api\HealthCare.Api.csproj", "{7EC1F47A-1DB0-4505-A84E-D6CB2EC41200}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCare.Idp", "HealthCare.Idp\HealthCare.Idp.csproj", "{239181DE-AA5D-4AF4-98EF-A6B1BCACA3F4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{28A654C3-CE60-41B5-AD01-EBA422AF01D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{598CB549-5BAD-4E69-A619-A0F32A952014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598CB549-5BAD-4E69-A619-A0F32A952014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598CB549-5BAD-4E69-A619-A0F32A952014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598CB549-5BAD-4E69-A619-A0F32A952014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC1F47A-1DB0-4505-A84E-D6CB2EC41200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC1F47A-1DB0-4505-A84E-D6CB2EC41200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC1F47A-1DB0-4505-A84E-D6CB2EC41200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC1F47A-1DB0-4505-A84E-D6CB2EC41200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239181DE-AA5D-4AF4-98EF-A6B1BCACA3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239181DE-AA5D-4AF4-98EF-A6B1BCACA3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239181DE-AA5D-4AF4-98EF-A6B1BCACA3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239181DE-AA5D-4AF4-98EF-A6B1BCACA3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A654C3-CE60-41B5-AD01-EBA422AF01D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A654C3-CE60-41B5-AD01-EBA422AF01D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A654C3-CE60-41B5-AD01-EBA422AF01D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A654C3-CE60-41B5-AD01-EBA422AF01D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

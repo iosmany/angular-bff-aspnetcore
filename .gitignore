@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/back/.vs
+/back/HealthCare.Api/bin
+/back/HealthCare.Api/obj
+/back/HealthCare.App/bin
+/back/HealthCare.App/obj
+/back/HealthCare.Back/bin
+/back/HealthCare.Back/obj
+/back/HealthCare.Idp/bin
+/back/HealthCare.Idp/obj
+/back/HealthCare.App/HealthCare.Api/bin/Debug/net9.0
+/back/HealthCare.App/HealthCare.Api/obj
+/back/obj/Docker

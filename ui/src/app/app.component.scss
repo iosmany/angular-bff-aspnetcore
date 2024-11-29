@@ -1,0 +1,23 @@
+.sidenav-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .content {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  mat-toolbar {
+    padding: 10px;
+  }
+  
+  mat-toolbar mat-icon {
+    margin-right: 8px;
+  }
+  

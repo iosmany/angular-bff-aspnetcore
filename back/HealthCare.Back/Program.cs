@@ -25,6 +25,10 @@ builder.Services.AddAuthentication(o =>
         //samesite to ensure the cookie is not sent in cross-site requests
         o.Cookie.SameSite = SameSiteMode.Strict;
 
+        /*
+         Note: if your app is using differents endpoints then configure CORS to ensure only calls from allowed hosts
+         */
+
         o.Events.OnRedirectToLogin = (context) =>
         {
             context.Response.StatusCode = StatusCodes.Status401Unauthorized;
@@ -35,21 +39,42 @@ builder.Services.AddAuthentication(o =>
     {
         //IdentityServer URL (DuendeIdentityProvider)
         options.Authority = IdpConstants.Authority;
+        
         options.ClientId = IdpConstants.ClientId;
-
         options.ClientSecret = IdpConstants.ClientSecret;
+        
         options.ResponseType = IdpConstants.ResponseType;
+        
         options.Scope.Add(IdpConstants.HealthCareApiScope);
         options.Scope.Add(IdpConstants.OfflineAccess);
+        
         options.SaveTokens = true;
+
     });
 
 var app = builder.Build();
 
+/*
+ Together, these lines configure the application to use the BFF middleware and expose the necessary
+management endpoints. This setup is essential for implementing the backend-for-frontend pattern, 
+which helps in securing and managing interactions between the frontend and backend services in a Blazor application.
+ */
 app.UseBff();
 app.MapBffManagementEndpoints();
-app.MapRemoteBffApiEndpoint("/api", "https://localhost:5216")
+
+//-------------------------------
+
+/*
+ The selected code configures the application to proxy requests from the /api endpoint 
+to a remote API running at https://localhost:7257. It also ensures that these requests 
+require an access token, adding a layer of security to the API access. 
+This setup is useful for scenarios where the frontend application needs to interact with a backend API securely.
+
+ */
+app.MapRemoteBffApiEndpoint("/api/v1", ApiConfig.ApiEndpoint)
     .RequireAccessToken();
+//----------------------------------
+
 app.UseSpaYarp();
 
 app.Run();

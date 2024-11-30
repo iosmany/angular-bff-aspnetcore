@@ -12,13 +12,13 @@ namespace HealthCare.Api.Repositories
                 {
                     Id = 1,
                     Name = "John Doe",
-                    DateOfBirth = new DateTime(1980, 1, 1),
+                    DoB = new DateTime(1980, 1, 1),
                 },
                 new PatientDTO
                 {
                     Id = 2,
                     Name = "Jane Doe",
-                    DateOfBirth = new DateTime(1985, 1, 1),
+                    DoB = new DateTime(1985, 1, 1),
                 },
             };
             return Task.FromResult(patients);

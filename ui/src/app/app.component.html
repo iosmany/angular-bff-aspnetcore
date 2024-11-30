@@ -2,9 +2,8 @@
   <!-- Sidebar -->
   <mat-sidenav mode="side" opened class="sidenav" #sidenav>
     <mat-nav-list>
-      <mat-list-item><mat-icon matListIcon>home</mat-icon> Home</mat-list-item>
-      <mat-list-item><mat-icon matListIcon>analytics</mat-icon> Analytics</mat-list-item>
-      <mat-list-item><mat-icon matListIcon>settings</mat-icon> Settings</mat-list-item>
+      <a mat-list-item routerLink="/home"><mat-icon matListIcon>home</mat-icon> Home</a>
+      <a mat-list-item routerLink="/patients"><mat-icon></mat-icon> Patients</a>
       <mat-list-item (click)="logOut()"><mat-icon matListIcon>logout</mat-icon> Logout</mat-list-item>
     </mat-nav-list>
   </mat-sidenav>

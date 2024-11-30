@@ -21,7 +21,7 @@ namespace HealthCare.Idp
         public static IEnumerable<ApiResource> ApiResources =>
            new ApiResource[]
            {
-                new ApiResource("healthcareapp", "Health Care API")
+                new ApiResource("healthcareaudapi", "Health Care API")
                 {
                     Scopes = { "healthcareapi" }
                 }

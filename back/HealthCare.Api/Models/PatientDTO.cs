@@ -2,11 +2,11 @@
 
 namespace HealthCare.Api.Models
 {
-    [JsonSerializable(typeof(PatientDTO))]
     public class PatientDTO
     {
         public int Id { get; set; }
         public required string Name { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime DoB { get; set; }
+        public int Age => (DateTime.Now - DoB).Days / 365;
     }
 }

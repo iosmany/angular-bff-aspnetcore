@@ -18,6 +18,7 @@ export class AuthService {
 
   nameClaim: string = '';
   roleClaim: string = '';
+  logoutUrl: string = '/account/logout';
 
   private _isAuthenticated = signal(false);
   private _isAuthenticated$ = toObservable(this._isAuthenticated).pipe(
@@ -40,6 +41,7 @@ export class AuthService {
   handleClaimsResponse(claims: UserClaim[]) {
     this.nameClaim = claims.find((c) => c.type === 'name')?.value || '';
     this.roleClaim = claims.find((c) => c.type === 'role')?.value || '';
+    this.logoutUrl = claims.find((c) => c.type === 'bff:logout_url')?.value || '/account/logout';
     this._isAuthenticated.set(claims.length > 0);
     return claims;
   }
@@ -61,5 +63,9 @@ export class AuthService {
     return this.userClaims$.pipe(
       map((response) => this._isAuthenticated()),
     );
+  }
+
+  logout() {
+    window.location.href = this.logoutUrl;  
   }
 }

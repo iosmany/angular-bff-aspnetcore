@@ -11,7 +11,7 @@ import { LOGIN_PATH } from "./auth.constants";
 export class AuthorizationComponent implements OnInit {
 
     private router: Router = inject(Router);
-    private authService: AuthService = inject(AuthService);
+    protected authService: AuthService = inject(AuthService);
 
     ngOnInit() {
        this.authService.isAuthenticated().subscribe((isAuthenticated: boolean) => {     
@@ -19,5 +19,9 @@ export class AuthorizationComponent implements OnInit {
                 window.location.href = LOGIN_PATH;
             }
         });
+    }
+
+    logOut(){
+        this.authService.logout();
     }
 }

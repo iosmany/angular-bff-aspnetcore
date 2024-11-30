@@ -27,8 +27,6 @@ namespace HealthCare.Idp
                 }
            };
 
-        
-
         public static IEnumerable<Client> Clients =>
             new Client[]
             {

@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from "@angular/core";
 import { AuthService } from "../../features/auth/auth.service";
-import { Observable } from "rxjs";
-import { UserClaim } from "../../features/auth/auth.models";
+import { Router } from "@angular/router";
+import { LOGIN_PATH } from "./auth.constants";
 
 
 @Component({
@@ -10,13 +10,14 @@ import { UserClaim } from "../../features/auth/auth.models";
 })
 export class AuthorizationComponent implements OnInit {
 
+    private router: Router = inject(Router);
     private authService: AuthService = inject(AuthService);
 
     ngOnInit() {
-        this.authService.getUserClaims()
-            .subscribe((claims: UserClaim[]) => {
-                console.log(claims);
-            });
+       this.authService.isAuthenticated().subscribe((isAuthenticated: boolean) => {     
+            if (!isAuthenticated) {
+                window.location.href = LOGIN_PATH;
+            }
+        });
     }
-
 }

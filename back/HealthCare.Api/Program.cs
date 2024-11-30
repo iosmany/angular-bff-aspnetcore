@@ -1,11 +1,5 @@
 using HealthCare.Api.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Cryptography;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Text.Json.Serialization.Metadata;
-using Microsoft.AspNetCore.Mvc.NewtonsoftJson; // Add this using directive
 
 var builder = WebApplication.CreateBuilder(args);
 
